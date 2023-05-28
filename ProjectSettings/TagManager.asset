@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - Destroyable
+  - Destroyable 4
   layers:
   - Default
   - TransparentFX
