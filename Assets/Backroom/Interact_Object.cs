@@ -11,6 +11,7 @@ public class Interact_Object : MonoBehaviour
     bool activate = false;
     public Note_Controller noteController;
 
+
     private void Update()
     {
         RaycastHit hit;
@@ -33,4 +34,6 @@ public class Interact_Object : MonoBehaviour
             }
         }
     }
+
+
 }
