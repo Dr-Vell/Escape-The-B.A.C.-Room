@@ -51,8 +51,10 @@ public class Note_Controller : MonoBehaviour
         return noteActive;
     }
 
-    public GameObject GetActivePanel()
+    public void DestroyActiveNote()
     {
-        return activePanel;
+        Destroy(activePanel);
+        noteActive = false;
     }
+    
 }

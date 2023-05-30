@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interact_Object : MonoBehaviour
 {
@@ -19,12 +20,16 @@ public class Interact_Object : MonoBehaviour
         {
             if (noteController.IsNoteActive())
             {
-                Destroy(noteController.GetActivePanel());
+                noteController.DestroyActiveNote();
             }
             else if (activate && hit.transform.CompareTag("Destroyable"))
             {
                 Destroy(hit.transform.gameObject);
                 noteController.ActivatePanel(hit.transform.name);
+            }
+            else if (activate && hit.transform.CompareTag("Terminal"))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }
