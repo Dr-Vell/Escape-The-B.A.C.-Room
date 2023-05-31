@@ -9,10 +9,9 @@ public class Spawn_Controller : MonoBehaviour
 
     public void Awake()
     {    
-        string sSpawn = PlayerPrefs.GetString("Player Spawn Position");
-
-        if (!string.IsNullOrEmpty(sSpawn))
+        if (PlayerPrefs.HasKey("Player Spawn Position"))
         {
+            string sSpawn = PlayerPrefs.GetString("Player Spawn Position");
             string[] sArray = sSpawn.Split(',');
             playerPosition = new Vector3(
                 float.Parse(sArray[0], CultureInfo.InvariantCulture),

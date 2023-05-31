@@ -27,6 +27,7 @@ public class Interact_Object : MonoBehaviour
             else if (activate && hit.transform.CompareTag("Destroyable"))
             {
                 Destroy(hit.transform.gameObject);
+                PlayerPrefs.SetInt(hit.transform.name, 1);
                 noteController.ActivatePanel(hit.transform.name);
             }
             else if (activate && hit.transform.CompareTag("Terminal"))
