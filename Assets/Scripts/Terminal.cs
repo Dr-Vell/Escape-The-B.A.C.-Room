@@ -22,7 +22,6 @@ public class Terminal : MonoBehaviour
         terminalInput.ActivateInputField();
         terminalInput.Select();
         interpreter = GetComponent<Interpreter>();    
-        PlayerPrefs.SetString("Player Spawn Position", "9.49,0.12,-5.40");
     }
 
     private void OnGUI()

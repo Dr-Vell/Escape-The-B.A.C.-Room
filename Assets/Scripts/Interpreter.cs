@@ -13,9 +13,14 @@ public class Interpreter : MonoBehaviour
     public List<string> Interpret(string userInput)
     {
         response.Clear();
+        int terminal = PlayerPrefs.GetInt("Terminal");
 
-        switch(userInput) 
-        {
+        if (terminal==1)
+        {            
+            PlayerPrefs.SetString("Player Spawn Position", "9.49,0.1030,-5.40");
+
+            switch(userInput) 
+            {
             case "A":
             case "a":
                 response.Add("You select option A...");
@@ -33,8 +38,6 @@ public class Interpreter : MonoBehaviour
 
             case "Go":
             case "go":
-            case "Start":
-            case "start":
                 StartChallenge("challenge_1.txt", 5);
                 break;   
 
@@ -44,10 +47,57 @@ public class Interpreter : MonoBehaviour
                 break; 
 
             default:
-                response.Add("Commant not recognized. Type help for a list of commands.");
+                response.Add("Commant not recognized. Type 'go' for the test to start or 'exit' to shut down this terminal.");
                 break;
-        }
+            }
         return response;
+
+        }
+        else if (terminal==2)
+        {
+            PlayerPrefs.SetString("Player Spawn Position", "-11.6368,0.1030,-28.8266");
+
+            switch(userInput) 
+            {
+            case "A":
+            case "a":
+                response.Add("You select option Tula...");
+                break;
+
+            case "exit":
+                response.Add("shutting down...");
+                ExitTerminal();
+                break; 
+
+            default:
+                response.Add("Commant not recognized. Type 'go' for the test to start or 'exit' to shut down this terminal.");
+                break;
+            }
+            return response;
+            
+        }   
+        else
+        {
+            PlayerPrefs.SetString("Player Spawn Position", "15.6564,0.1030,-33.3403");
+
+            switch(userInput) 
+            {
+            case "A":
+            case "a":
+                response.Add("You select option Pingo...");
+                break;
+
+            case "exit":
+                response.Add("shutting down...");
+                ExitTerminal();
+                break; 
+
+            default:
+                response.Add("Commant not recognized. Type 'go' for the test to start or 'exit' to shut down this terminal.");
+                break;
+            }
+            return response;
+        }  
     }
 
     void StartChallenge(string path, int spacing)

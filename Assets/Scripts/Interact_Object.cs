@@ -1,4 +1,5 @@
 // Script Interact_Object
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +31,8 @@ public class Interact_Object : MonoBehaviour
             }
             else if (activate && hit.transform.CompareTag("Terminal"))
             {
+                int terminalNumber = (int) Char.GetNumericValue(hit.transform.name[hit.transform.name.Length - 1]);
+                PlayerPrefs.SetInt("Terminal", terminalNumber);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
