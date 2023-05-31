@@ -31,7 +31,25 @@ public class Terminal : MonoBehaviour
             string userInput = terminalInput.text;
             ClearInputField();
             AddDirectoryLine(userInput);
-            int lines = AddInterpreterLines(interpreter.Interpret(userInput));
+
+            int terminal = PlayerPrefs.GetInt("Terminal");
+            int lines;
+            
+            switch(terminal)
+            {    
+                case 1:
+                    PlayerPrefs.SetString("Player Spawn Position", "9.49,0.1030,-5.40");
+                    lines = AddInterpreterLines(interpreter.Interpret_1(userInput));
+                    break;
+                case 2:
+                    PlayerPrefs.SetString("Player Spawn Position", "-11.6368,0.1030,-28.8266");
+                    lines = AddInterpreterLines(interpreter.Interpret_2(userInput));                    
+                    break;
+                default:
+                    PlayerPrefs.SetString("Player Spawn Position", "15.6564,0.1030,-33.3403");
+                    lines = AddInterpreterLines(interpreter.Interpret_3(userInput));
+                    break;
+            }
             ScrollToBottom(lines);
             userInputLine.transform.SetAsLastSibling();
             terminalInput.ActivateInputField();

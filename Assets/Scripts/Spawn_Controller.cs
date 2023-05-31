@@ -23,8 +23,6 @@ public class Spawn_Controller : MonoBehaviour
     }
     public void Start()
     {
-        Debug.Log(transform.position);
         transform.position = playerPosition;
-        Debug.Log(transform.position);
     }
 }
