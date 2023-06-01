@@ -18,13 +18,13 @@ __   _____ _ __ ___ _  ___  _ __   `| | | |/' |
 |______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|
            
 
-This is the first out of three challenges you will need to complete in order to escape. 
+This is the second out of three challenges you will need to complete in order to escape. 
 
 Some simple test questions will be displayed now.
 
 To answer them, you will need to choose only one of the answers.
 
-Use the keyboard to type the options "A", "B" or "C".
+Use the keyboard to type the options "A" or "B".
 
 WARNING: Do NOT answer them incorrectly...
     
@@ -32,14 +32,17 @@ WARNING: Do NOT answer them incorrectly...
 |______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|
            
 
-What does Broken Access Control mean?
+User A, with minimum privileges on the system, makes the following change in the URL:
 
-A. Broken Access Control refers to the process of granting users access to resources based on their role 
-   and privileges within an organization.
+http://example.com/restricted-area.html?session_id=123
 
-B. Broken Access Control means a web vulnerability where restrictions on user access or actions are not 
-   properly enforced, allowing unauthorized users to bypass security measures and gain unauthorized access 
-   to resources.
+turns into:
 
-C. Broken Access Control refers to the encryption algorithms used to secure user access to sensitive data,
-   ensuring that only authorized users can decrypt and access the information.
+http://example.com/restricted-area.html?session_id=456
+
+After that change, the website returns the restricted-area of User B.
+
+This is called a Man-in-the-Middle (MitM) Attack.
+
+A. True
+B. False

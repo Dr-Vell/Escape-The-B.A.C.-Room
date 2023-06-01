@@ -18,7 +18,7 @@ __   _____ _ __ ___ _  ___  _ __   `| | | |/' |
 |______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|
            
 
-This is the first out of three challenges you will need to complete in order to escape. 
+This is the third out of three challenges you will need to complete in order to escape. 
 
 Some simple test questions will be displayed now.
 
@@ -31,15 +31,9 @@ WARNING: Do NOT answer them incorrectly...
  ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ 
 |______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|
            
+            
+What are some common mitigation techniques to counter Broken Access Control attacks?
 
-What does Broken Access Control mean?
-
-A. Broken Access Control refers to the process of granting users access to resources based on their role 
-   and privileges within an organization.
-
-B. Broken Access Control means a web vulnerability where restrictions on user access or actions are not 
-   properly enforced, allowing unauthorized users to bypass security measures and gain unauthorized access 
-   to resources.
-
-C. Broken Access Control refers to the encryption algorithms used to secure user access to sensitive data,
-   ensuring that only authorized users can decrypt and access the information.
+A. Implement Security through Obscurity and Obfuscate Access Control Logic.
+B. Invalidate sessions after a some time and Implement Access Control Checks.
+C. Obfuscate Access Control Logic passwords Validating.

@@ -42,11 +42,11 @@ public class Terminal : MonoBehaviour
                     lines = AddInterpreterLines(interpreter.Interpret_1(userInput));
                     break;
                 case 2:
-                    PlayerPrefs.SetString("Player Spawn Position", "-11.6368,0.1030,-28.8266");
+                    PlayerPrefs.SetString("Player Spawn Position", "15.6564,0.1030,-33.3403");
                     lines = AddInterpreterLines(interpreter.Interpret_2(userInput));                    
                     break;
                 default:
-                    PlayerPrefs.SetString("Player Spawn Position", "15.6564,0.1030,-33.3403");
+                    PlayerPrefs.SetString("Player Spawn Position", "-11.6368,0.1030,-28.8266");
                     lines = AddInterpreterLines(interpreter.Interpret_3(userInput));
                     break;
             }

@@ -8,7 +8,7 @@ public class Play_Script : MonoBehaviour
 
     public void Play()
     {        
-        PlayerPrefs.SetString("Player Spawn Position", "-0.4187095,1.017,-11.15717");
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

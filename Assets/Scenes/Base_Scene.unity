@@ -137,8 +137,9 @@ GameObject:
   - component: {fileID: 123199349}
   - component: {fileID: 123199352}
   - component: {fileID: 123199350}
+  - component: {fileID: 123199353}
   m_Layer: 0
-  m_Name: Terminal Cube 3
+  m_Name: Terminal Cube 2
   m_TagString: Terminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,7 +158,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1623487825}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &123199350
 BoxCollider:
@@ -180,6 +181,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123199348}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &123199353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123199348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a6d48183c5c264eb1ed8b52e1c5d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &153906283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2217,6 +2230,7 @@ GameObject:
   - component: {fileID: 1085993261}
   - component: {fileID: 1085993260}
   - component: {fileID: 1085993258}
+  - component: {fileID: 1085993262}
   m_Layer: 0
   m_Name: Terminal Cube 1
   m_TagString: Terminal
@@ -2260,6 +2274,18 @@ Transform:
   m_Father: {fileID: 1623487825}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1085993262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085993257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a6d48183c5c264eb1ed8b52e1c5d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1103494949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdd2962e40fd9b046ba6ef74173f89d2,
@@ -2618,9 +2644,9 @@ Transform:
   - {fileID: 318810511}
   - {fileID: 1085993261}
   - {fileID: 1103494949}
-  - {fileID: 2052732284}
-  - {fileID: 552056079}
   - {fileID: 123199349}
+  - {fileID: 552056079}
+  - {fileID: 2052732284}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2832,8 +2858,9 @@ GameObject:
   - component: {fileID: 2052732284}
   - component: {fileID: 2052732287}
   - component: {fileID: 2052732285}
+  - component: {fileID: 2052732288}
   m_Layer: 0
-  m_Name: Terminal Cube 2
+  m_Name: Terminal Cube 3
   m_TagString: Terminal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2852,7 +2879,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1623487825}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2052732285
 BoxCollider:
@@ -2875,6 +2902,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052732283}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2052732288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052732283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a6d48183c5c264eb1ed8b52e1c5d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2059577637
 PrefabInstance:
   m_ObjectHideFlags: 0
