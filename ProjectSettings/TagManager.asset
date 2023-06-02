@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
+  - Destroyable
+  - Destroyable 4
+  - Terminal
+  - Enemy
+  - Exit
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.Globalization;
+
+public class Spawn_Controller : MonoBehaviour
+{
+    private Vector3 playerPosition;
+
+    public void Awake()
+    {    
+        if (PlayerPrefs.HasKey("Player Spawn Position"))
+        {
+            string sSpawn = PlayerPrefs.GetString("Player Spawn Position");
+            string[] sArray = sSpawn.Split(',');
+            playerPosition = new Vector3(
+                float.Parse(sArray[0], CultureInfo.InvariantCulture),
+                float.Parse(sArray[1], CultureInfo.InvariantCulture),
+                float.Parse(sArray[2], CultureInfo.InvariantCulture));
+            
+        }
+    }
+    public void Start()
+    {
+        transform.position = playerPosition;
+    }
+}
