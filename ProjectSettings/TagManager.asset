@@ -8,6 +8,7 @@ TagManager:
   - Destroyable
   - Destroyable 4
   - Terminal
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,8 @@ public class Interact_Object : MonoBehaviour
     public float playerActivateDistance;
     bool activate = false;
     public Note_Controller noteController;
+    public GameObject deathScreen;
+    public GameObject bgm;
 
 
     private void Update()
@@ -38,6 +40,23 @@ public class Interact_Object : MonoBehaviour
             }
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Colision detectada");
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Colision enemiga");
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        bgm.SetActive(false);
+        deathScreen.SetActive(true);
+    }
+
 
 
 }
