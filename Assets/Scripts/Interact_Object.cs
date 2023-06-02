@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Threading;
+using System.Threading.Tasks;
 
 public class Interact_Object : MonoBehaviour
 {
@@ -43,20 +45,25 @@ public class Interact_Object : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Colision detectada");
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Colision enemiga");
             Die();
         }
     }
 
-    private void Die()
+    async private void Die()
     {
         bgm.SetActive(false);
         deathScreen.SetActive(true);
+        await LoadMenu();
     }
 
-
+    async Task LoadMenu()
+    {        
+        await Task.Delay(4000);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);    
+    }
 
 }
