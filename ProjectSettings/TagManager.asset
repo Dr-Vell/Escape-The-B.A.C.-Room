@@ -9,6 +9,7 @@ TagManager:
   - Destroyable 4
   - Terminal
   - Enemy
+  - Exit
   layers:
   - Default
   - TransparentFX

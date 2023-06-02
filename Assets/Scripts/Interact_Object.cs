@@ -15,9 +15,10 @@ public class Interact_Object : MonoBehaviour
     public Note_Controller noteController;
     public GameObject deathScreen;
     public GameObject bgm;
+    public GameObject escape;
 
 
-    private void Update()
+    private async void Update()
     {
         RaycastHit hit;
         activate = Physics.Raycast(cam.position, cam.TransformDirection(Vector3.forward), out hit, playerActivateDistance);
@@ -40,6 +41,11 @@ public class Interact_Object : MonoBehaviour
                 PlayerPrefs.SetInt("Terminal", terminalNumber);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
+            else if (activate && hit.transform.CompareTag("Exit"))
+            {
+                escape.SetActive(true);    
+                await LoadMenu();            
+            }
         }
     }
 
@@ -60,7 +66,7 @@ public class Interact_Object : MonoBehaviour
 
     async Task LoadMenu()
     {        
-        await Task.Delay(4000);
+        await Task.Delay(7000);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);    

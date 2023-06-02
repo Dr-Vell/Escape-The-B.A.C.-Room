@@ -10,6 +10,7 @@ public class Enemy_Spawn : MonoBehaviour
     public GameObject cube1;
     public GameObject cube2;
     public GameObject cube3;
+    public GameObject exit;
 
     
     // Start is called before the first frame update
@@ -23,7 +24,10 @@ public class Enemy_Spawn : MonoBehaviour
             cube1.SetActive(false);
             cube2.SetActive(false);
             cube3.SetActive(false);
-
+        }
+        if(PlayerPrefs.HasKey("Terminal Cube 1")&&PlayerPrefs.HasKey("Terminal Cube 2")&&PlayerPrefs.HasKey("Terminal Cube 3"))
+        {
+            exit.SetActive(true);
         }
 
     }
