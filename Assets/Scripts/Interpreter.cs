@@ -458,7 +458,7 @@ public class Interpreter : MonoBehaviour
     {
         response.Add("You select option " + userInput + "...");                 
         response.Add("");
-        response.Add(" Correct!     ~(^-^)~");                  
+        response.Add(" Correct!");                  
         response.Add("");
     }
 
@@ -472,7 +472,7 @@ public class Interpreter : MonoBehaviour
     {
         response.Add("You select option " + userInput + "...");                    
         response.Add("");
-        response.Add(" WRONG!!!     ( ఠൠఠ )ﾉ");
+        response.Add(" WRONG!!!");
         IncorrectAnswerEnding();
     }
 
@@ -485,19 +485,215 @@ public class Interpreter : MonoBehaviour
 
     void Read_File_Terminal(string path, int spacing)
     {        
-        
-        List<string> lines = new List<string>();
+        response.AddRange(Enumerable.Repeat("", spacing));
 
-        using (StreamReader file = new StreamReader(Path.Combine(Application.streamingAssetsPath, path)))
+        switch(path)
         {
-            while (!file.EndOfStream)
-            {
-                lines.Add(file.ReadLine());
-            }
+            case "challenge_1.txt":             
+                response.Add("");
+                response.Add("Escape the BAC ROOM");
+                response.Add("v1.0");
+                response.Add("                                                                                                       "); 
+                response.Add("                                                                                                        ");
+                response.Add("______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ");
+                response.Add("|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|");
+                response.Add("        ");
+                response.Add("");
+                response.Add("This is the first out of three challenges you will need to complete in order to escape. ");
+                response.Add("");
+                response.Add("Some simple test questions will be displayed now.");
+                response.Add("");
+                response.Add("To answer them, you will need to choose only one of the answers.");
+                response.Add("");
+                response.Add(" Use the keyboard to type the options A, B or C.");
+                response.Add("");
+                response.Add("WARNING: Do NOT answer them incorrectly...");
+                response.Add("    ");
+                response.Add("______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ");
+                response.Add("|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|");
+                response.Add("        ");
+                response.Add("");
+                response.Add("What does Broken Access Control mean?");
+                response.Add("");
+                response.Add("A. Broken Access Control refers to the process of granting users access to resources based on their role ");
+                response.Add("and privileges within an organization.");
+                response.Add("");
+                response.Add("B. Broken Access Control means a web vulnerability where restrictions on user access or actions are not ");
+                response.Add("properly enforced, allowing unauthorized users to bypass security measures and gain unauthorized access ");
+                response.Add("to resources.");
+                response.Add("");       
+                response.Add("C. Broken Access Control refers to the encryption algorithms used to secure user access to sensitive data,");
+                response.Add("ensuring that only authorized users can decrypt and access the information.");
+                response.Add("");
+                break;
+
+            case "challenge_2.txt":             
+                response.Add("");
+                response.Add("Escape the BAC ROOM");
+                response.Add("v1.0");
+                response.Add("                                                                                                       "); 
+                response.Add("                                                                                                        ");
+                response.Add("______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ");
+                response.Add("|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|");
+                response.Add("        ");
+                response.Add("");
+                response.Add("This is the second out of three challenges you will need to complete in order to escape. ");
+                response.Add("");
+                response.Add("Some simple test questions will be displayed now.");
+                response.Add("");
+                response.Add("To answer them, you will need to choose only one of the answers.");
+                response.Add("");
+                response.Add(" Use the keyboard to type the options A or B.");
+                response.Add("");
+                response.Add("WARNING: Do NOT answer them incorrectly...");
+                response.Add("    ");
+                response.Add("______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ");
+                response.Add("|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|");
+                response.Add("        ");
+                response.Add("");
+                response.Add("User A, with minimum privileges on the system, makes the following change in the URL:");
+
+                response.Add("http://example.com/restricted-area.html?session_id=123");
+
+                response.Add("turns into:");
+
+                response.Add("http://example.com/restricted-area.html?session_id=456");
+
+                response.Add("After that change, the website returns the restricted-area of User B.");
+
+                response.Add("This is called a Man-in-the-Middle (MitM) Attack.");
+
+                response.Add("");
+                response.Add("A. True");
+                response.Add("B. False ");
+                response.Add("");
+                break;
+
+            case "challenge_3.txt":             
+                response.Add("");
+                response.Add("Escape the BAC ROOM");
+                response.Add("v1.0");
+                response.Add("                                                                                                       "); 
+                response.Add("                                                                                                        ");
+                response.Add("______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ");
+                response.Add("|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|");
+                response.Add("        ");
+                response.Add("");
+                response.Add("This is the third out of three challenges you will need to complete in order to escape. ");
+                response.Add("");
+                response.Add("Some simple test questions will be displayed now.");
+                response.Add("");
+                response.Add("To answer them, you will need to choose only one of the answers.");
+                response.Add("");
+                response.Add(" Use the keyboard to type the options A, B or C.");
+                response.Add("");
+                response.Add("WARNING: Do NOT answer them incorrectly...");
+                response.Add("    ");
+                response.Add("______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ");
+                response.Add("|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|");
+                response.Add("        ");
+                response.Add("");
+                response.Add("What are some common mitigation techniques to counter Broken Access Control attacks?");
+                response.Add("");
+                response.Add("A. Implement Security through Obscurity and Obfuscate Access Control Logic.");
+                response.Add("");
+                response.Add("B. Invalidate sessions after a some time and Implement Access Control Checks.");
+                response.Add("");       
+                response.Add("C. Obfuscate Access Control Logic passwords Validating.");
+                response.Add("");
+                break;
+
+            case "help_command.txt":             
+                response.Add("");
+                response.Add("B.A.C. Manual");                                   
+                response.Add("        ");                                                                                                  
+                response.Add(" ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ");
+                response.Add("|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|");
+                response.Add("");
+                response.Add("");
+                response.Add("INTRO");
+                response.Add("");
+                response.Add("");
+                response.Add("Access control allows enforcing a policy of permissions and roles, meaning that a user can access ");
+                response.Add("certain places. These restrictions imply that users cannot act beyond their permissions and, moreover,"); 
+                response.Add("keep track of who accesses each resource. The vulnerability Broken Access Control allows a user without ");
+                response.Add("privileges to access a resource they shouldn't have access to.");
+                response.Add("   ");
+                response.Add("What impact can this have on my company?");
+                response.Add("");
+                response.Add(" - A cybercriminal could operate within the system with user or administrator permissions.");
+                response.Add(" - Access to sensitive records, directories, or files for potential disclosure later on.");
+                response.Add("");
+                response.Add(" ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ");
+                response.Add("|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|");
+                response.Add("           ");
+                response.Add("            ");
+                response.Add("ATTACK");
+                response.Add("         ");             
+                response.Add("");
+                response.Add("");
+                response.Add("From the user's perspective, it is important to consider two main types of authorization attacks:");
+                response.Add("");
+                response.Add(" - Horizontal bypassing:  refers to the situation where an unauthorized user gains access to other ");
+                response.Add("			  users' accounts that have the same level of privileges.");
+                response.Add("");
+                response.Add(" - Vertical bypassing:  an attacker obtains a higher level of privilege, such as root or superuser privilege, ");
+                response.Add("			surpassing the intended level granted by the system.");
+                response.Add("");
+                response.Add("");
+                response.Add("Here are some examples of Broken Access Control attacks:");
+                response.Add("");
+                response.Add(" - Bypassing authentication by manipulating URL or HTTP parameters");
+                response.Add(" - Inadecuate session management, leading to session hijacking or fixation.");
+                response.Add(" - Using forced browsing to access restricted resources.");
+                response.Add(" - Lack of access control checks on APIs, leading to unauthorized acces to sensitive data.");
+                response.Add("");
+                response.Add("");
+                response.Add("");
+                response.Add("Here's an example of URL Tampering:");
+                response.Add("");
+                response.Add("     User A, with minimum privileges on the system, makes the following change in the URL:");
+                response.Add("");
+                response.Add("     http://example.com/restricted-area.html?session_id=123");
+                response.Add("");
+                response.Add("	turns into:");
+                response.Add("");
+                response.Add("     http://example.com/restricted-area.html?session_id=456");
+                response.Add("");
+                response.Add("     After that change, the website returns the restricted-area of User B.");
+                response.Add("    ");
+                response.Add(" ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ______ ");
+                response.Add("|______|______|______|______|______|______|______|______|______|______|______|______|______|______|______|");
+                response.Add("           ");
+                response.Add("");
+                response.Add("DEFENSE");
+                response.Add("          ");            
+                response.Add("To guard against broken access control attacks, developers can implement several fundamental precautions. ");
+                response.Add("The process should start with assessing the access control requirements of the application and creating a ");
+                response.Add("security policy that aligns with those requirements. This assessment should include developing an access ");
+                response.Add("control matrix, clearly defining which types of users are granted access, and specifying the allowed and ");
+                response.Add("prohibited uses of that access.");
+                response.Add("");
+                response.Add("Implement role-based access control (RBAC) to enforce appropriate restrictions for each role. ");
+                response.Add("Ensure that the access control mechanism is correctly applied on the server side, covering all pages and API ");
+                response.Add("endpoints in web applications. Mere requests for direct access to a website or resource should not grant users ");
+                response.Add("unauthorized functionality or access to data.");
+                response.Add("");
+                response.Add("Below are the guidelines to avoid broken access control:");
+                response.Add("");
+                response.Add(" - Avoid relying solely on obfuscation for access control.");
+                response.Add(" - Define the level of access granted to each resource in the code itself, with a default denial of all access.");
+                response.Add(" - By default, restrict access if a resource is not intended to be publicly shared.");
+                response.Add(" - Conduct audits and comprehensive testing of access control to verify its proper functioning.");
+                response.Add("");
+                response.Add("");
+                response.Add("");
+                response.Add("");
+                response.Add("");
+                response.Add("Now, if you feel ready, type go to start the challenge.");
+                break;
         }
 
-        response.AddRange(Enumerable.Repeat("", spacing));
-        response.AddRange(lines);
         response.AddRange(Enumerable.Repeat("", spacing));
     }
 
