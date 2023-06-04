@@ -13,6 +13,8 @@ public class Play_Script : MonoBehaviour
     public void Play()
     {        
         PlayerPrefs.DeleteAll();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
